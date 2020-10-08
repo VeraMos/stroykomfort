@@ -14,7 +14,21 @@
 </head>
 <body>
 	<header class="main-header">
-		
+		<div class="header-logo__mobile">
+			<img src="../img/logo-mobile.png" alt="Логотип">
+			<button class="header-mobile__btn">
+				<svg class="header-menu__btn-svg" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0H18V3H0V0Z" fill="white"/>
+				<path d="M0 7H18V10H0V7Z" fill="white"/>
+				<path d="M0 14H18V17H0V14Z" fill="white"/>
+				</svg>
+
+				<svg class="header-menu__btn-svg_close" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2.12132 0L14.8492 12.7279L12.7279 14.8492L3.63588e-06 2.12132L2.12132 0Z" fill="white"/>
+				<path d="M12.7279 0L0 12.7279L2.12132 14.8492L14.8492 2.12132L12.7279 0Z" fill="white"/>
+				</svg>
+			</button>
+		</div>
 			<div class="header-top__wpr">
 				<div class="container">
 					<div class="header-top">
@@ -149,8 +163,16 @@
 
 	<section>
 		<div class="row">
-			<div class="col-3">
-				<div class="catalog-inner__ttl">Каталог продукции</div>
+			<div class="col-lg-4 col-xl-3">
+				<div class="catalog-inner__ttl"><span>Каталог продукции</span>
+					<div class="catalog-btn__mobile">
+						<svg class="header-menu__btn-svg" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0H18V3H0V0Z" fill="white"></path>
+						<path d="M0 7H18V10H0V7Z" fill="white"></path>
+						<path d="M0 14H18V17H0V14Z" fill="white"></path>
+						</svg>
+					</div>
+				</div>
 				<ul class="catalog-inner__menu">					
 					<li><a href="" class="header-menu_level2-link">Пиломатериалы</a></li>
 					<li><a href="" class="header-menu_level2-link">Декоры для парной</a>
@@ -180,12 +202,13 @@
 					<li><a href="" class="header-menu_level2-link">Пульты управления</a></li>
 					<li><a href="" class="header-menu_level2-link">Всё для хамама</a></li>
 				</ul>
-
-				<button class="catalog-btn">Рассчитать стоимость печи онлайн</button>
-				<button class="catalog-btn">Подбор печи онлайн</button>
-				<button class="catalog-btn">Детали сайны</button>
+				<div class="catalog-btn__wpr">
+					<button class="catalog-btn">Рассчитать стоимость печи онлайн</button>
+					<button class="catalog-btn">Подбор печи онлайн</button>
+					<button class="catalog-btn">Детали сайны</button>
+				</div>
 			</div>
-			<div class="col-9">
+			<div class="col-lg-8 col-xl-9">
 				<h1 class="section__ttl text-left">Вагонка</h1>
 				<div class="d-flex flex-column">
 					<div class="categor-block">
@@ -375,13 +398,16 @@
 		<div class="container">
 			<p class="section__ttl form-ttl">Свяжитесь с нами и получите индивидуальные условия</p>
 			<form class="form-feed">
-				<div class="d-flex">
+				<div class="d-flex form-feed__inn">
 					<input class="form-feed__input" type="text" name="name" placeholder="Имя" required>
 		       	 	<input class="form-feed__input" type="tel" name="phone" placeholder="+7(___)___-__-__" required>
 			    </div>
 			    
 			    <button class="btn form-feed__btn" type="submit">Отправить</button>
-			    <div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+			    <label class="form-feed__label">
+			    	<input type="checkbox" checked="" required="" class="feed__radio">
+			    	<div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+				</label>
 			</form>
 		</div>
 	</section>
@@ -432,7 +458,7 @@
 				</div>
 			</div>
 		
-			<div class="footer-copy d-flex">
+			<div class="footer-copy d-flex flex-wrap">
 				<div class="footer-copy__link d-flex justify-content-between">
 					<a href="#">Все права защищены</a>
 					<a href="#">Политика конфеденциальности</a>

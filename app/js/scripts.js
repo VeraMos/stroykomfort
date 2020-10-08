@@ -57,7 +57,23 @@ $(document).ready(function () {
       prevArrow: '<button class="prev-left__black"></button>',
       nextArrow: '<button class="prev-right__black"></button>',
       infinite: true,
-      initialSlide: 1
+      initialSlide: 1,
+      responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          }
+      }
+      ]      
     });
 
     $('.main-form__file').styler({

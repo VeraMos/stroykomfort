@@ -14,7 +14,22 @@
 </head>
 <body>
 	<header class="main-header">
-		
+		<div class="header-logo__mobile">
+			<img src="../img/logo-mobile.png" alt="Логотип">
+			<button class="header-mobile__btn">
+				<svg class="header-menu__btn-svg" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0H18V3H0V0Z" fill="white"/>
+				<path d="M0 7H18V10H0V7Z" fill="white"/>
+				<path d="M0 14H18V17H0V14Z" fill="white"/>
+				</svg>
+
+				<svg class="header-menu__btn-svg_close" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2.12132 0L14.8492 12.7279L12.7279 14.8492L3.63588e-06 2.12132L2.12132 0Z" fill="white"/>
+				<path d="M12.7279 0L0 12.7279L2.12132 14.8492L14.8492 2.12132L12.7279 0Z" fill="white"/>
+				</svg>
+
+			</button>
+		</div>
 			<div class="header-top__wpr">
 				<div class="container">
 					<div class="header-top">
@@ -449,7 +464,10 @@
 			        	<input class="main-form__file" type="file" name="">
 			    	</div>
 		    	</div>
-			        <div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+			         <label class="form-feed__label">
+			    		<input type="checkbox" checked="" required="" class="feed__radio">
+			    		<div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+					</label>
 			        <button class="btn" type="submit">Отправить</button>
 			</form>
 			<hr class="mt-5">
@@ -491,7 +509,7 @@
 
 	<section class="links-block__wpr">
 		<div class="container">
-			<div class="d-flex justify-content-center">
+			<div class="d-flex justify-content-center flex-wrap">
 				<div class="links-block">
 				<a href="" class="links-bloc_link">
 					
@@ -519,19 +537,19 @@
 
 	<section class="map">
 		 <div class="tabs">
-                <ul class="tabs__list tabs__map d-flex">
+                <ul class="tabs__list tabs__map d-flex flex-wrap">
                     <li class="active btn">Панорама офиса</li>
                     <li class="btn">Карта построенных объектов</li>
                 </ul>
                 <div class="tabs__content">
                     <div class="tabs__content-item active-tab">
                     	<div class="map-img">
-			              <img src="img/map.jpg" alt="Карта">
+			              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4a4b11465592c76032e005d23d55092c121887ba4cc2cdddc15f2bb03f6268d3&amp;width=1900&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 		               </div>
 	                </div>
                     <div class="tabs__content-item">
                     	<div class="map-img">
-			              <img src="img/map.jpg" alt="Карта">
+			              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor3A4a4b11465592c76032e005d23d55092c121887ba4cc2cdddc15f2bb03f6268d3&amp;width=1900&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 		               </div>
 	                </div>          
               
@@ -543,13 +561,16 @@
 		<div class="container">
 			<p class="section__ttl form-ttl">Свяжитесь с нами и получите индивидуальные условия</p>
 			<form class="form-feed">
-				<div class="d-flex">
+				<div class="d-flex form-feed__inn">
 					<input class="form-feed__input" type="text" name="name" placeholder="Имя" required>
 		       	 	<input class="form-feed__input" type="tel" name="phone" placeholder="+7(___)___-__-__" required>
 			    </div>
 			    
 			    <button class="btn form-feed__btn" type="submit">Отправить</button>
-			    <div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+			    <label class="form-feed__label">
+			    	<input type="checkbox" checked="" required="" class="feed__radio">
+			    	<div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+				</label>
 			</form>
 		</div>
 	</section>
@@ -600,7 +621,7 @@
 				</div>
 			</div>
 		
-			<div class="footer-copy d-flex">
+			<div class="footer-copy d-flex flex-wrap">
 				<div class="footer-copy__link d-flex justify-content-between">
 					<a href="#">Все права защищены</a>
 					<a href="#">Политика конфеденциальности</a>

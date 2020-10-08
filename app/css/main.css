@@ -353,6 +353,7 @@ textarea:active {
   font-size: 16px;
   line-height: 20px;
   color: #22201D;
+  margin: 0 4px 10px 0;
 }
 
 .header-cart__text span{
@@ -371,6 +372,7 @@ textarea:active {
 
 .cart__btn svg {
   fill: #22201D;
+  margin-right: 5px;
 }
 
 .cart__btn:hover {
@@ -656,7 +658,7 @@ textarea:active {
 .slider-reviews__block {
   display: flex!important;
   max-width: 580px;
-  margin: 15px;
+  margin: 0 15px;
 }
 
 
@@ -860,19 +862,24 @@ textarea:active {
     background-color: #fff;
   }
 
-  .map-img img {
-    width: 100%;
-  }
-
-  .map-img {
+   .map-img {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
   }
+
 
   .map {
     height: 450px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .map .tabs__content-item {
+    background: transparent;
+    border: none;
   }
 
   .form-feed__wpr{
@@ -1002,7 +1009,7 @@ textarea:active {
 
 .form-feed__text {
   text-align: center;
-  margin: 30px 0;
+  padding-left: 28px;
 }
 
 .form-feed__btn {
@@ -1440,6 +1447,7 @@ textarea:active {
     border: 1px solid #C0C0C0;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: #fff;
   }
 
   .catalog-item__ttl {
@@ -1587,9 +1595,6 @@ textarea:active {
 }
 
 .btn__cat-inner {
-  position: absolute;
-  bottom: 0;
-  left: 35%;
   width: 230px;
 }
 
@@ -1757,6 +1762,7 @@ textarea:active {
   line-height: 30px;
   text-decoration: line-through;
   color: #5E5E5E;
+  margin-bottom: 5px;
 }
 
 .product__prise {
@@ -1764,12 +1770,14 @@ textarea:active {
   font-weight: 900;
   font-size: 35px;
   line-height: 43px;
+  margin-bottom: 5px;
 }
 
 .product__add-prise {
   font-size: 16px;
   line-height: 20px;
   color: #22201D;
+  margin-bottom: 23px;
 }
 
 .product-description .btn {
@@ -1794,7 +1802,7 @@ textarea:active {
   background: #FFFFFF;
   width: 90px;
   display: flex;
-  height: 50px;
+  height: 45px;
   padding: 6px;
 }
 
@@ -1819,6 +1827,28 @@ textarea:active {
   border-radius: 3px;
   background: transparent;
   width: 340px;
+  color: #5E5E5E;
+  padding: 12px 0 12px 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 3;
+  height: 45px;
+}
+
+.product-options_inn {
+  position: relative;
+}
+
+.product-options_inn:after {
+  content: "";
+  top: 20px;
+  right: 12px;
+  background: url('../img/str-select.svg') no-repeat;
+  width: 10px;
+  height: 8px;
+  position: absolute;
+  z-index: 0;
 }
 
 .product-quantity__number {
@@ -1829,4 +1859,84 @@ textarea:active {
 
 .product-options {
   justify-content: space-between;
+  
+}
+
+.product__type {
+  color: #000;
+  margin: 30px 0 25px;
+  display: flex;
+}
+
+.feed__radio {
+    display: none;
+}
+
+.form-feed__text:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #5C5C5C;
+    background: #eee;
+    border-radius: 3px;
+  }
+
+.form-feed__text:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  background: url('../img/gal.svg');
+  width: 14px;
+  height: 16px;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.form-feed__label input[type="checkbox"]:checked + .form-feed__text:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.form-feed__label {
+  margin: 30px auto;
+  position: relative;
+  max-width: 470px;
+  display: block;
+}
+
+.product__type-link {
+  margin: 0 10px;
+}
+
+.popup__title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 43px;
+  color: #000;
+  margin-bottom: 22px;
+}
+
+.popup__input {
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 370px;
+  height: 40px;
+  margin: 10px 0;
+  padding: 12px 0 8px 20px;
+}
+
+.header-logo__mobile {
+  display: none;
+}
+
+.catalog-btn__mobile {
+  display: none;
 }

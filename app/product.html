@@ -14,7 +14,21 @@
 </head>
 <body>
 	<header class="main-header">
-		
+		<div class="header-logo__mobile">
+			<img src="../img/logo-mobile.png" alt="Логотип">
+			<button class="header-mobile__btn">
+				<svg class="header-menu__btn-svg" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0H18V3H0V0Z" fill="white"/>
+				<path d="M0 7H18V10H0V7Z" fill="white"/>
+				<path d="M0 14H18V17H0V14Z" fill="white"/>
+				</svg>
+
+				<svg class="header-menu__btn-svg_close" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2.12132 0L14.8492 12.7279L12.7279 14.8492L3.63588e-06 2.12132L2.12132 0Z" fill="white"/>
+				<path d="M12.7279 0L0 12.7279L2.12132 14.8492L14.8492 2.12132L12.7279 0Z" fill="white"/>
+				</svg>
+			</button>
+		</div>
 			<div class="header-top__wpr">
 				<div class="container">
 					<div class="header-top">
@@ -70,6 +84,7 @@
 						</ul>
 						<p class="header-adress">г. Самара, 9 просека, 5-я линия, д. 122</p>
 					</div>
+					
 				</div>
 			</div>
 
@@ -154,12 +169,12 @@
 
 	<section class="product">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-lg-6">
 				<div class="product-img">
 					<img src="img/product-img.png" alt="">
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-lg-6">
 				<div class="product-description">
 					<p class="product__in-stock">В наличии</p>
 					<div class="section-products__ttl" style="font-weight: 900;">Одиночная накладка или название в две строки</div>
@@ -167,23 +182,32 @@
 					<p class="product__prise">320 руб.</p>
 					<p class="product__add-prise">м/п 25 000 руб | м/п 26 354 руб</p>
 					<form>
-						<div class="product-options d-flex">
-							<select>
-								<option>Выберите длинну</option>
-								<option>10</option>
-								<option>20</option>
-								<option>30</option>
-								<option>40</option>
-							</select>
+						<div class="product-options d-flex flex-wrap">
+							<div class="product-options_inn">
+								<select>
+									<option>Выберите длину</option>
+									<option>10</option>
+									<option>20</option>
+									<option>30</option>
+									<option>40</option>
+								</select>
+							</div>
 							<div class="product-quantity">
 								<button class="product-quantity__minus" type="button" value="-1">&minus;</button>
 								<input class="product-quantity__number" type="text" name="" value="1">
 								<button class="product-quantity__plus" type="button" value="+1">&plus;</button>
 							</div>
 						</div>
-						<div><p><b>Порода</b> - Ольха</p></div>
+						<div class="product__type">
+							<p><b>Порода</b> - <u>Ольха</u></p>
+							<a class="product__type-link" href=""><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11 22.2891C4.9 22.2891 0 17.3891 0 11.2891C0 5.18906 4.9 0.289062 11 0.289062C17.1 0.289062 22 5.18906 22 11.2891C22 17.3891 17.1 22.2891 11 22.2891ZM11 2.28906C6 2.28906 2 6.28906 2 11.2891C2 16.2891 6 20.2891 11 20.2891C16 20.2891 20 16.2891 20 11.2891C20 6.28906 16 2.28906 11 2.28906Z" fill="#5E5E5E"/>
+							<path d="M10.9941 7.00195C11.9298 7.00195 12.6454 7.22999 13.1408 7.68605C13.6361 8.14212 13.8838 8.73185 13.8838 9.45527C13.8838 9.9821 13.7659 10.3989 13.53 10.7055C13.2941 11.0122 12.9363 11.3267 12.4567 11.6491C12.1657 11.8535 11.9652 12.0265 11.8551 12.1681C11.7529 12.3017 11.7018 12.4905 11.7018 12.7342C11.7018 12.9036 11.5645 13.0409 11.3951 13.0409H10.3218C10.1524 13.0409 10.0151 12.9036 10.0151 12.7342C10.0151 12.286 10.0977 11.9282 10.2628 11.6609C10.4358 11.3935 10.7386 11.0987 11.171 10.7763C11.2025 10.7527 11.2772 10.6977 11.3951 10.6112C11.5209 10.5247 11.5956 10.4696 11.6192 10.446C11.6507 10.4224 11.7097 10.3753 11.7962 10.3045C11.8905 10.2259 11.9456 10.1669 11.9613 10.1276C11.9849 10.0804 12.0203 10.0214 12.0674 9.95065C12.1146 9.87202 12.1421 9.79732 12.15 9.72655C12.1657 9.64791 12.1736 9.56142 12.1736 9.46706C12.1736 9.17612 12.0753 8.9363 11.8787 8.74758C11.6821 8.55886 11.403 8.46451 11.0413 8.46451C10.5584 8.46451 10.2165 8.61714 10.0156 8.92241C9.76423 9.30432 9.44118 9.70296 8.98399 9.70296C8.50755 9.70296 8.10713 9.3036 8.2441 8.84726C8.36782 8.43507 8.58073 8.07552 8.88284 7.76861C9.37822 7.25751 10.082 7.00195 10.9941 7.00195ZM11.749 14.6804C11.749 15.1754 11.3417 15.5768 10.8467 15.5768C10.3516 15.5768 9.94437 15.1754 9.94437 14.6804C9.94437 14.1853 10.3516 13.784 10.8467 13.784C11.3417 13.784 11.749 14.1853 11.749 14.6804Z" fill="#5E5E5E"/>
+							</svg></a>
+
+						</div>
 						<hr class="product-hr">
-						<button class="btn">Рассчитать количество</button>
+						<button class="btn" data-src="#popup" data-fancybox="">Рассчитать количество</button>
 						<button class="btn">Рассчитать сауну</button>
 						<button class="btn">Карта сауны</button>
 					</form>
@@ -213,7 +237,7 @@
 		<section class="product-tabs">
 			<div class="container container-inn">
 		<div class="tabs">
-                <ul class="tabs__list tabs__products d-flex">
+                <ul class="tabs__list tabs__products d-flex flex-wrap">
                     <li class="active">Характеристики</li>
                     <li>Полезная информация</li>
                     <li>Доставка и оплата</li>
@@ -372,16 +396,35 @@
 		<div class="container">
 			<p class="section__ttl form-ttl">Свяжитесь с нами и получите индивидуальные условия</p>
 			<form class="form-feed">
-				<div class="d-flex">
+				<div class="d-flex form-feed__inn">
 					<input class="form-feed__input" type="text" name="name" placeholder="Имя" required>
 		       	 	<input class="form-feed__input" type="tel" name="phone" placeholder="+7(___)___-__-__" required>
 			    </div>
 			    
 			    <button class="btn form-feed__btn" type="submit">Отправить</button>
-			    <div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+			    <label class="form-feed__label">
+			    	<input type="checkbox" checked="" required="" class="feed__radio">
+			    	<div class="form-feed__text">Даю согласие на обработку персональных данных</div>
+				</label>
 			</form>
 		</div>
 	</section>
+
+	<section class="popup" id="popup" style="display: none;">
+    <div class="container">
+        <div class="popup__title">Форма обратной связи</div>
+        <form method="POST" action="" class="popup-form" >
+    		<div class="d-flex flex-column align-items-center">
+       		<input class="popup__input" type="text" name="" placeholder="Имя" value="" required>
+            <input class="popup__input mask_phone" type="tel" name="" placeholder="+7 (___)___-__-__" value="" required>
+            <input class="popup__input"  type="email" name="" placeholder="Телефон" value="" >
+        	<label class="form-feed__label">
+		    	<input type="checkbox" checked="" required="" class="feed__radio">
+		    	<div class="form-feed__text pl-4">Даю согласие на обработку персональных данных</div>
+			</label>
+		</form>
+    </div>
+</section>
 	
 
 	<footer class="main-footer">
@@ -429,7 +472,7 @@
 				</div>
 			</div>
 		
-			<div class="footer-copy d-flex">
+			<div class="footer-copy d-flex flex-wrap">
 				<div class="footer-copy__link d-flex justify-content-between">
 					<a href="#">Все права защищены</a>
 					<a href="#">Политика конфеденциальности</a>
